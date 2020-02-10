@@ -1,0 +1,27 @@
+@import "variables";
+
+footer {
+  display: flex;
+  flex-direction: column;
+
+  section {
+    max-width: 800px;
+    margin: 50px auto 20px;
+
+    .text {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .return-2-search {
+      display: block;
+      background-color: green;
+      color: white;
+      padding: 1em 1.5em;
+      text-decoration: none;
+      font-weight: $font-400;
+      font-family: $font-family-Arial;
+      width: 100px;
+    }
+  }
+}
