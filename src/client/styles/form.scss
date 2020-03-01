@@ -3,6 +3,8 @@
 .text {
   font-weight: $font-400;
   font-family: $font-family-Arial;
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
 .news-form {
@@ -26,6 +28,17 @@
         background-color: blueviolet;
         color: #fff;
       }
+    }
+  }
+}
+
+.overview {
+  .article {
+    margin-bottom: 20px;
+    h4 {
+      font-weight: $font-400;
+      font-family: $font-family-Arial;
+      font-size: 18px;
     }
   }
 }

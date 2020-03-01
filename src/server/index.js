@@ -1,7 +1,6 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-var path = require("path");
 const express = require("express");
 const mockAPIResponse = require("./mockAPI.js");
 
@@ -19,6 +18,8 @@ app.use(cors());
 
 app.use(express.static("dist"));
 
+console.log(__dirname);
+
 app.get("/", function(req, res) {
   res.sendFile("./dist/index.html");
 });
@@ -33,8 +34,32 @@ app.get("/test", function(req, res) {
   res.send(mockAPIResponse);
 });
 
-var AYLIENTextAPI = require("aylien_textapi");
-var textapi = new aylien({
+let data = {};
+
+const aylien = require("aylien_textapi");
+const textapi = new aylien({
   application_id: process.env.API_ID,
   application_key: process.env.API_KEY
+});
+
+app.post("/sentiment", function(req, res) {
+  // console.log(req);
+  let urlSearched = req.body.url;
+
+  textapi.sentiment({ url: urlSearched }, function(
+    error,
+    response,
+    rateLimits
+  ) {
+    console.log(rateLimits);
+    console.log(response);
+    console.log(data);
+    if (error === null) {
+      data = response;
+      res.send(data);
+      console.log(data);
+    } else {
+      console.log(error);
+    }
+  });
 });
