@@ -9,4 +9,6 @@ The goal of this project is to give you practice with:
 - Service workers
 - Using APIs and creating requests to external urls
 
-USed stack overflow to idenify regex expression - https://stackoverflow.com/questions/18568244/url-validation-regex-url-just-valid-with-http
+Used
+documentation from https://aylien.com/
+stack overflow to idenify regex expression - https://stackoverflow.com/questions/18568244/url-validation-regex-url-just-valid-with-http
