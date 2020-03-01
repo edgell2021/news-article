@@ -30,6 +30,21 @@
       }
     }
   }
+
+  .error-msg {
+    color: red;
+    font-weight: $font-400;
+    font-family: $font-family-Arial;
+    width: 400px;
+    margin: 0 auto;
+
+    &.hide {
+      display: none;
+    }
+    &.show {
+      display: block;
+    }
+  }
 }
 
 .overview {
